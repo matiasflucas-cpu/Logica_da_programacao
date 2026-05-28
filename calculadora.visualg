@@ -1,0 +1,42 @@
+algoritmo "calculadora"
+var
+   num1, num2, resultado: real
+   opcao: inteiro
+
+inicio
+   escreval("Digite o primeiro número: ")
+   leia(num1)
+
+   escreval("Digite o segundo número: ")
+   leia(num2)
+
+   escreval("=== MENU DE OPERAÇÕES ===")
+   escreval("1 - Soma")
+   escreval("2 - Subtração")
+   escreval("3 - Multiplicação")
+   escreval("4 - Divisão")
+   escreval("Escolha uma opção: ")
+   leia(opcao)
+
+   escolha opcao
+      caso 1
+         resultado <- num1 + num2
+         escreval("Resultado: ", num1, " + ", num2, " = ", resultado)
+      caso 2
+         resultado <- num1 - num2
+         escreval("Resultado: ", num1, " - ", num2, " = ", resultado)
+      caso 3
+         resultado <- num1 * num2
+         escreval("Resultado: ", num1, " * ", num2, " = ", resultado)
+      caso 4
+         se (num2 = 0) entao
+            escreval("Divisão por zero não é permitida.")
+         senao
+            resultado <- num1 / num2
+            escreval("Resultado: ", num1, " / ", num2, " = ", resultado)
+         fimse
+      outrocaso
+         escreval("Opção inválida. Escolha entre 1 e 4.")
+   fimescolha
+
+fimalgoritmo
