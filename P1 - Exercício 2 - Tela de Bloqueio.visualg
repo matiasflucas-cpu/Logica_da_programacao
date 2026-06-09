@@ -1,0 +1,23 @@
+algoritmo "tela_de_bloqueio"
+
+var
+   senha_correta: caractere
+   senha_digitada: caractere
+
+inicio
+
+   senha_correta <- "123456"
+
+   escreval("Digite a senha:")
+   leia(senha_digitada)
+
+   enquanto senha_digitada <> senha_correta faca
+
+      escreval("Senha incorreta, acesso negado. Tente novamente:")
+      leia(senha_digitada)
+
+   fimenquanto
+
+   escreval("Acesso liberado!")
+
+fimalgoritmo
